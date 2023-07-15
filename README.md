@@ -10,11 +10,11 @@ Pour lancer le projet :
 Se rendre dans dossier backend et installer node et toute les dépendances :
 
 <kbd>**cd back-end/ && npm i **</kbd>
+<kbd>**npm i express**</kbd>
 
-Ensuite, lancer le serveur.
+Ensuite, lancer le serveur : <kbd>**npm start**</kbd>
 
-
-:file_folder: **frontend** :
+:file_folder: **frontend** : 
 Enfin, pour lancer le Front, ouvrir un nouveau terminal et se rendre dans le dossier front-end
 
 <kbd>**cd front-end/**</kbd>
