@@ -1,0 +1,108 @@
+.icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon_like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon_like :nth-child(2){
+    color: gray;
+    font-weight: 550;
+}
+
+.like_text{
+    display: flex;
+    gap: 10px;
+}
+
+.thumbsUp{
+    color: black;
+    background-color: #e5e6e8;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+    transition: all 1s;
+    animation: shake 1s ease-in-out;
+}
+
+.like{
+    color: white;
+    background-color: #1b74e4;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+    transition: all 1s;
+    animation: shake 1s ease-in-out;
+    animation: upThumbs 1s ease-in-out;
+}
+
+@keyframes shake {
+    from {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes upThumbs {
+    from {
+        transform: rotate(-15deg);
+    }
+}
+
+
+.thumbsUp, .like:hover{
+    cursor: pointer;
+}
+
+
+.infos{
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    transition: all 1s;
+    animation: show 1s ease-in-out;
+    position: fixed;
+    z-index: 2;
+    top: 10%;
+    left: 30%;
+    right: 30%;
+    font-size: 17px;
+    gap : 12px;
+    overflow: hidden;
+}
+
+@keyframes show {
+    0% {
+        transform: translatey(-90px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.hideInfos{
+    display: none;
+}
+
+.check{
+    background-color: white;
+    color :  #2ecc71;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 12px;
+}
+
+

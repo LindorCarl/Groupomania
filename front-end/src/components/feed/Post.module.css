@@ -1,0 +1,258 @@
+.infos{
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    transition: all 1s;
+    animation: show 1s ease-in-out;
+    position: fixed;
+    z-index: 2;
+    top: 56px;
+    left: 13px;
+    right: 13px;
+    font-size: 14px;
+    gap : 10px;
+    overflow: hidden;
+}
+
+@keyframes show {
+    0% {
+        transform: translatey(-90px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.infos::after{
+    content: "✔";
+    color: #2ecc71;
+    background-color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: shakeIcon 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+@keyframes shakeIcon {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% { 
+    transform: translate3d(2px, 0, 0);
+    }
+}
+
+.hideInfos{
+    display: none;
+}
+
+.form{
+    margin: 3rem auto 1.6rem auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px -3px black;
+    transition: all 1s;
+    animation: show 0.5s ease-in-out;
+}
+
+@keyframes show {
+    0% {
+        transform: translatey(-50px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.title{
+    margin-top: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: gray;
+}
+
+.textarea{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #e5e6e8;
+    border: #e5e6e8;
+    resize: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.container_file{
+    display: none;
+}
+
+.container_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.container_label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.container_label:hover{
+    cursor: pointer;
+    color: rgb(250, 117, 90);
+}
+
+.image_name{
+    font-weight: 700;
+    color: gray;
+}
+
+.buttonPost{
+    background-color: rgb(250, 117, 90);
+    width: 120px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 550;
+    color: white;
+    padding: 0 10px 3px 10px;
+    animation: shakeIcon 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+@keyframes shakeIcon {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% { 
+    transform: translate3d(2px, 0, 0);
+    }
+}
+
+.buttonPost:hover{
+    cursor: pointer;
+    border: none;
+    color: gray;
+    box-shadow: 1px 1px 10px -3px black;
+}
+
+.buttonDisabled{
+    background-color: #e5e6e8;
+    width: 120px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 550;
+    color: white;
+    padding: 0 10px 3px 10px;
+}
+
+.img_display{
+    height: 270px;
+    width: 480px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px -3px black;
+    object-fit: cover;
+    margin: 10px 0 6px 0;
+    transition: all 5s;
+    animation: appear 1s ease-in-out;
+}
+
+@keyframes appear {
+    from {
+        transform: scale(0.9);
+    }
+}
+
+.elementDisplay{
+    position: relative;
+}
+
+.faXmark{
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    color : black;
+    background-color: #e4e6eb;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    animation: visibleA ease-in-out 2s;
+}
+
+.faXmark:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
+@keyframes visibleA {
+    0% {
+        opacity: 0;
+        
+    }100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .form{
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .img_display{
+        width: 100%;
+    }
+
+    .infos{
+        top: 18%;
+    }
+}

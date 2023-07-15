@@ -1,0 +1,76 @@
+.infos{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    background-color: #2ecc71;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    transition: all 1s;
+    animation: show 1s ease-in-out;
+    position: fixed;
+    z-index: 2;
+    top: 56px;
+    left: 13px;
+    right: 13px;
+    font-size: 14px;
+    gap : 7px;
+    overflow: hidden;
+}
+
+@keyframes show {
+    0% {
+        transform: translatey(-90px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.hideInfos{
+    display: none;
+}
+
+.infos::after{
+    content: "👋";
+    margin-bottom: 3px;
+    animation: shakeIcon 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+.check{
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 12px;
+    animation: shakeIcon 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+@keyframes shakeIcon {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% { 
+    transform: translate3d(2px, 0, 0);
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .infos{
+        top: 16%;
+    }
+}
+

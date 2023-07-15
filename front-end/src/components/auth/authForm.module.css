@@ -1,0 +1,461 @@
+.confirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 12px;
+    width: 302px;
+    max-width: 302px;
+    margin: auto;
+    text-align: center;
+    background-color: #2ecc71;
+    color: white;
+    padding: 13px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    transition: all 1s;
+    animation: show 1s ease-in-out;
+    position: fixed;
+    z-index: 2;
+    top: 13px;
+    left: 13px;
+    right: 13px;
+    font-size: 14px;
+}
+
+.authConfirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 10px;
+    width: 220px;
+    max-width: 220px;
+    margin: auto;
+    text-align: center;
+    background-color: #2ecc71;
+    color: white;
+    padding: 13px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    transition: all 1s;
+    animation: show 1s ease-in-out;
+    position: fixed;
+    z-index: 2;
+    top: 13px;
+    left: 13px;
+    right: 13px;
+    font-size: 14px;
+}
+
+.authConfirm::after{
+    content: "✔";
+    color: #2ecc71;
+    background-color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: shakeIcon 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+@keyframes shakeIcon {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% { 
+    transform: translate3d(2px, 0, 0);
+    }
+}
+
+.hideInfos{
+    display: none;
+}
+
+.loginError{
+    width: 302px;
+    max-width: 302px;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(211, 47, 47);
+    color: white;
+    padding: 13px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    transition: all 1s;
+    animation: show 1s ease-in-out;
+    position: fixed;
+    z-index: 2;
+    top: 13px;
+    left: 13px;
+    right: 13px;
+    font-size: 14px;
+}
+
+@keyframes show {
+    0% {
+        transform: translatey(-50px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.auth{
+    width: 65%;
+    max-width: 450px; 
+    margin: 6rem auto 2rem auto;
+    height: auto;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 0 8px #ccc;
+    padding-bottom: 20px;
+    transition: all 5s;
+    animation: slide 0.3s ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        transform: translatex(200%);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+
+.logo{
+    width: 150px;
+    object-fit: cover;
+    margin: 20px auto 0 auto;
+}
+
+h2{
+    font-size: 1.3rem;
+    color: #888;
+    font-weight: 500;
+    margin: 20px 0;
+    font-weight: 200;
+    animation: wiggle 2s linear infinite;
+}
+
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+}
+
+.form{
+    background-color: rgb(250, 117, 90);
+    border-radius: 10px;
+    width: 78%;
+    margin: auto auto 10px auto;
+    padding: 18px 0 13px 0;
+    box-shadow: 0 0 8px black;
+}
+
+.radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: #e5e6e8;
+    margin-bottom: 5px;
+    font-size: 13.5px;
+}
+
+.radio_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #e5e6e8;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 5px;
+    color: #888;
+}
+
+.control{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto auto 7px auto;
+    position: relative;
+}
+
+.control > label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.control > input{
+    height: 33px;
+    border-radius: 5px;
+    border: #e5e6e8; 
+    background-color: #e5e6e8;
+    padding-left: 27px;
+}
+
+.control ::placeholder {
+    color: #888;
+}
+
+.avatar{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 27%;
+    left: 2%;
+    color: #4e5d74;
+}
+
+.iconInput{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 27%;
+    left: 2%;
+    color: #4e5d74;
+}
+
+.iconInputEye{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom : 5px;
+    right: 3%;
+    border: none;
+    background-color: #e5e6e8;
+}
+
+.iconEye{
+    position: absolute;
+    bottom: 25%;
+    right: 1%;
+    background-color: #e5e6e8;
+    border: #e5e6e8;
+    color: #4e5d74;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+::-ms-reveal {
+    display: none;
+}
+
+.control_error{
+    color: white;
+    font-weight: 550;
+    text-align: center;
+    margin : 5px 0;
+    width: 87%;
+    margin: auto;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.secretKey{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto auto 7px auto;
+    position: relative; 
+    transition: all 1s;
+    animation: showPassword 1s ease-in-out;
+}
+
+.secretKey > label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.secretKey > input{
+    height: 33px;
+    border-radius: 5px;
+    border: #e5e6e8; 
+    background-color: #e5e6e8;
+    padding-left: 27px;
+}
+
+.secretKey ::placeholder {
+    color: #888;
+}
+
+.hideSecretKey{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto auto 7px auto;
+    position: relative; 
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+    animation: hidePassword 1s ease-in-out;
+}
+
+.hideSecretKey > label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.hideSecretKey > input{
+    height: 33px;
+    border-radius: 5px;
+    border: #e5e6e8; 
+    background-color: #e5e6e8;
+    padding-left: 27px;
+}
+
+.password_infos{
+    list-style-type: none;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    transition: all 1s;
+    animation: showPassword 1s ease-in-out;
+    font-size: 13px;
+}
+
+@keyframes hidePassword {
+    0% {
+        transform: translatey(0px);
+    }
+    100% {
+        transform: translatey(-15px);
+    }
+}
+
+.password_length , .password_maj, .password_num, .password_min{
+    color: #2ecc71;
+}
+
+@keyframes showPassword {
+    0% {
+        transform: translatey(-15px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.text{
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    gap: 10px;
+}
+
+.text :nth-child(2){
+    cursor: pointer;
+    color: rgb(250, 117, 90);
+}
+
+.text :nth-child(2):hover{
+    text-decoration: underline 2px ;
+}
+
+.loading {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #fa755a;
+    border-radius: 50%;
+    border-top-color: #fff;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    animation: spin 1s ease-in-out infinite;
+    margin: 10px auto;
+}
+  
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+
+.button{
+    background-color: rgb(250, 117, 90);
+    width: 140px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 550;
+    margin: 15px auto;
+    color: white;
+    padding-top: 2px;
+}
+
+.button:hover{
+    cursor: pointer;
+    border: none;
+    color: gray;
+    box-shadow: 0 0 8px black;
+}
+
+@media screen and (max-width: 570px) {
+    .auth{
+        width: 85%;
+        max-width: 450px; 
+    }
+
+    .text{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .confirm{
+        width: 60%;
+    }
+
+    .loginError{
+        width: 60%;
+    }
+
+    .auth{
+        margin: 6.5rem auto 2rem auto;
+    }
+}
+
+
+

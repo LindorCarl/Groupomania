@@ -1,0 +1,453 @@
+.box_comment_like{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.commentNumber{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.commentNumber :nth-child(2){
+    color: gray;
+    font-weight: 550;
+}
+
+.faComment{
+    color: gray;
+}
+
+.faComment :hover {
+    cursor: pointer;
+    color : rgb(250, 117, 90);
+    transition: all 1s;
+}
+
+.line{
+    border : 1px solid #e5e6e8;
+    margin: 5px 2px;
+}
+
+.infos{
+    width: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    transition: all 1s;
+    animation: show 1s ease-in-out;
+    position: fixed;
+    z-index: 2;
+    top: 56px;
+    left: 13px;
+    right: 13px;
+    font-size: 14px;
+    gap : 10px;
+    overflow: hidden;
+}
+
+@keyframes show {
+    0% {
+        transform: translatey(-90px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.infos::after{
+    content: "✔";
+    color: #2ecc71;
+    background-color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: shakeIcon 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+@keyframes shakeIcon {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% { 
+    transform: translate3d(2px, 0, 0);
+    }
+}
+
+.hideInfos{
+    display: none;
+}
+
+.boxText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.boxComment{
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.hide_boxComment{
+    display: none;
+}
+
+.profil{
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    background-color: #e5e6e8;
+    border-radius: 10px;
+    padding: 10px 10px 10px 0 ;
+    margin-top: 10px;
+    word-break: break-all;
+    max-width: 387px;
+}
+
+.user_name{
+    display: flex;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.user_name :nth-child(2){
+    color: grey;
+    font-weight: normal;
+}
+
+.user :nth-child(1){
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.user :nth-child(2){
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.user_message{
+    margin-left: 10px;
+    word-break: break-word;
+}
+
+.iconPoints{
+    position: absolute;
+    left: 100%;
+    top: 50%;
+}
+
+.icon{
+    display: flex;
+    box-shadow: 1px 1px 10px -3px black;
+    gap: 5px;
+    position: absolute;
+    top : 30px;
+    right: -2px;
+    padding : 5px;
+    border-radius: 10px;
+    z-index: 7;
+    background-color: #fa755a;
+}
+
+.icon::after{
+    content:""; 
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-bottom: 10px solid #fa755a;
+    position: absolute;
+    left: 37px;
+    bottom: 97%;
+    z-index: 7;
+}
+
+.iconAdmin{
+    display: flex;
+    box-shadow: 1px 1px 10px -3px black;
+    gap: 5px;
+    position: absolute;
+    top : 30px;
+    right: -2px;
+    padding : 5px;
+    border-radius: 10px;
+    z-index: 7;
+    background-color: #fa755a;
+}
+
+.iconAdmin::after{
+    content:""; 
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-bottom: 10px solid #fa755a;
+    position: absolute;
+    left: 7.39px;
+    bottom: 97%;
+    z-index: 7;
+}
+
+.icon :nth-child(1) {
+    padding : 5px;
+    border-radius: 20px;
+    background-color: #e5e6e8;
+    color: black;
+    background-color: rgb(250, 117, 90);
+    color: white;
+}
+
+.icon :nth-child(1):hover{
+    cursor: pointer;
+    background-color: #e5e6e8;
+    color: black;
+}
+
+.icon :nth-child(2) {
+    padding : 5px;
+    border-radius: 20px;
+    color: white;
+}
+
+.icon :nth-child(2):hover{
+    cursor: pointer;
+    background-color: #e5e6e8;
+    color: red;
+}
+
+.iconAdmin :nth-child(1) {
+    padding : 5px;
+    border-radius: 20px;
+    color: white;
+}
+
+.iconAdmin :nth-child(1):hover{
+    cursor: pointer;
+    background-color: #e5e6e8;
+    color: red;
+}
+
+.points{
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px; 
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 12px;
+    margin-top: -10px;
+}
+
+.points:hover{
+    background-color: #e5e6e8;
+}
+
+.textArea{
+    border-radius: 10px;
+    background-color: #e5e6e8;
+    border: #e5e6e8;
+    padding: 10px;
+    margin: 5px 0 0 50px;
+    width: 89%;
+    overflow: hidden;
+    height : 60px;
+    resize: none;
+    word-break: break-word;
+}
+
+a {
+    text-decoration: none; 
+}
+
+a:hover {
+    color: #fa755a;
+}
+
+.update{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.updateButton{
+    padding: 0px 10px 2px 10px;
+    background-color: aquamarine;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 550;
+    margin: 15px 0;
+    color: white;
+}
+
+.updateButton:hover{
+    cursor: pointer;
+    border: none;
+    color: gray;
+    box-shadow: 1px 1px 10px -3px black;
+}
+
+.disabledButton{
+    padding: 0px 10px 2px 10px;
+    background-color: rgba(0, 0, 0, 0.12);
+    width: 120px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 550;
+    margin: 15px 0;
+    color: rgba(0, 0, 0, 0.26);
+    border: none;
+}
+
+.update :nth-child(2){
+    margin-left: 0;
+    margin-right: 0;
+    width: 86px;
+    padding: 0px 10px 2px 10px;
+}
+
+.comment{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.faPaperPlane{
+    background-color: #e5e6e8;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18.5px;
+    animation: shakeIcon 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+@keyframes shakeIcon {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% { 
+    transform: translate3d(2px, 0, 0);
+    }
+
+}
+
+.faPaperPlane:hover{
+    cursor: pointer;
+    background-color: rgb(250, 117, 90);
+    color: white;
+    transition: all 1s;
+}
+
+.disabled{
+    background-color: #e5e6e8;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18.5px;
+}
+
+.textBox{
+    width: 100%;
+    margin-top: 0px;
+    padding: 0.6rem 1.2rem 0.7rem 1.2rem;
+    border-width: initial;
+    border-color:  initial;
+    border-image: initial;
+    background-color: #e5e6e8;
+    border-radius: 2rem;
+    border-style: unset;
+    resize: none;
+}
+
+@media screen and (max-width: 570px) {
+    
+    .boxComment{
+        margin-right: 40px;
+    }
+
+    .box_textArea{
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .infos{
+        top: 18%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .points{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 471px) {
+    .user_name{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
