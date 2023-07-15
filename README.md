@@ -11,16 +11,13 @@ Se rendre dans dossier backend et installer node et toute les dépendances :
 
 <kbd>**cd back-end/ && npm i **</kbd>
 
-Ensuite, lancer le server :
+Ensuite, lancer le serveur.
 
-nodemon server.js
 
 :file_folder: **frontend** :
 Enfin, pour lancer le Front, ouvrir un nouveau terminal et se rendre dans le dossier front-end
 
 <kbd>**cd front-end/**</kbd>
 
-puis lancer react
-
-<kbd>**npm start**</kbd>
+puis lancer react : <kbd>**npm start**</kbd>
 
